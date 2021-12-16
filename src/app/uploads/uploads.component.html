@@ -1,0 +1,48 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+
+  </head>
+<body>
+    <div  class="container" style="margin-top:70px;">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>Image Share</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+              <p>Add Image</p>
+
+              <form method="POST" style="font-size: 10pt;" [formGroup]="postForm"  (ngSubmit)="submitNewAsset()" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="body" class="form-label">body</label>
+                  <input type="textarea" class="form-control" id="body" formControlName="body">
+                </div>
+
+                <div class="form-group">
+                  <label for="title" class="form-label">title</label>
+                  <input type="textarea" class="form-control" id="title" formControlName="title">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="filePath" class="form-label">File to Upload</label>
+                  <input type="file" class="form-control" id="filePath" (change)="onFileSelect($event)">
+                </div>
+            
+                <button type="submit" id="postForm" class="btn btn-primary">Submit</button> <br/><br/>
+                
+
+            <div class="col-2"  ></div>
+   

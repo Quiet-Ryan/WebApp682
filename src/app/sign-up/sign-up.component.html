@@ -1,0 +1,51 @@
+<body>
+<div class="row align-items-start">
+    <div class="col-2"  ></div>
+
+    <div class="col-8" style="text-align: left;border-bottom:1px solid #222222;">
+      <p>Add new User</p>
+
+      <form method="POST" style="font-size: 10pt;"  [formGroup]="userForm"  (ngSubmit)="submitNewAsset()" enctype="multipart/form-data" >
+        <div class="form-group">
+            <label for="username" class="form-label">username</label>
+            <input type="text" class="form-control" id="username" formControlName="username">
+          </div>
+          
+        <div class="form-group">
+            <label for="password" class="form-label">password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+          </div>
+
+          <div class="form-group">
+            <label for="Bio" class="form-label">Bio</label>
+            <input type="text" class="form-control" id="Bio" formControlName="Bio">
+          </div>
+
+        <div class="form-group">
+          <label for="name" class="form-label">name</label>
+          <input type="test" class="form-control" id="name" formControlName="name">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="surname" class="form-label">surname</label>
+          <input type="test" class="form-control" id="surname" formControlName="surname">
+        </div>
+
+        <div class="form-group">
+            <label for="birthdate" class="form-label">your date of birth</label>
+            <input type="date" class="form-control" id="birthdate" formControlName="birthdate">
+          </div>
+
+        
+          <div class="form-group">
+            <label for="email" class="form-label">email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+          </div>
+
+          
+    
+        <button type="submit" id="postForm" class="btn btn-primary">Submit</button> <br/><br/>
+        
+
+    <div class="col-2"  ></div>

@@ -1,0 +1,78 @@
+<body>
+<h1>Welcome to the profile section!</h1>
+<p style="color: rgb(231, 229, 229);;">This section contains every post made by the user</p>
+
+
+
+          <!-- View One User Area-->
+          <div class="container" style="margin-top:100px; text-align:center">
+            <div class="row">
+                <div class="col-sn-12">
+                    <div class="card text-white bg-dark mb-3" style = "width: 50rem; text-align:center">
+                      <div class="card-header">
+                        <br>
+                        Username:
+                        {{webService.log_list.username}}
+                      </div>
+                      <div class="card-body">
+                        Name:
+                        {{webService.log_list.name}}
+                        <br>
+                        Surname:
+                        {{webService.log_list.surname}}
+                        <br>
+                        Date of birth:
+                        {{webService.log_list.birthdate}}
+                        <br>
+                        email:
+                        {{webService.log_list.email}}
+                        <br>
+                      </div>
+                      <div class="card-footer">
+                        Personal Bio:
+                        {{webService.log_list.Bio}}
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- col -->
+          </div><!-- container -->
+
+ <h2>
+ This is a personalised feed
+</h2>
+<div class = “card-body”>
+<!-- the card body text -->
+</div>
+<div class = “card-footer”>
+<!-- the card footer text -->
+</div>
+
+  <!-- View Posts Area-->
+  <div class="container" style="text-align:center">
+    <div class="row">
+        <div class="col-sn-12">
+          <div *ngFor="let follow of webService.Follower_list">
+            <div class="card text-white bg-dark mb-3" style = "width: 50rem; text-align:center">
+              <div class="card-header">
+                <img src = "{{webService.imagepath}}{{follow.filePath}}" class="center" style="width: 500px;">
+              </div>
+              <div class="card-body">
+                Comment:
+                {{follow.body}}
+              </div>
+              <div class="card-footer">
+                Uploaded by:
+                {{follow.userID}}
+                <br>
+                Replies:
+                {{follow.userName}}
+              </div>
+              <div style="padding:5px;">
+            </div>
+            </div>
+          </div>
+        </div> <!-- col -->
+    </div>
+  </div><!-- container -->
+</body>

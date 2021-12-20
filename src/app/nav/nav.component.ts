@@ -12,4 +12,9 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+logOut(){
+  sessionStorage.removeItem('loginId');
+  sessionStorage.removeItem('loginUser');
 }
+}
+

@@ -15,11 +15,12 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { LoginComponent } from './login/login.component';
 import { UploadsComponent } from './uploads/uploads.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { CommentsComponent } from './comments/comments.component';
 
 /** Currently unsued imports for code display/editing */
 import { MsalModule } from '@azure/msal-angular';
 import { PublicClientApplication } from '@azure/msal-browser';
+
 
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
@@ -28,6 +29,10 @@ var routes: any = [
   {
     path: '',
     component: HomeComponent
+    },
+    {
+      path: 'home/:id',
+    component: CommentsComponent
     },
     {
     path: 'upload',
@@ -55,7 +60,8 @@ var routes: any = [
     ProfilesComponent,
     LoginComponent,
     UploadsComponent,
-    SignUpComponent
+    SignUpComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,37 @@
+<!--COMMENTS-->
+<div class="container" style="text-align:center">
+<div class="row"> <!-- row -->
+    <div class="col-sn-12"> <!-- col -->
+      <!-- for loop of replies list* -->
+      <div *ngFor="let comment of webService.comment_list">
+        <!-- Bootstrap card start -->
+        <div class="card text-white bg-dark mb-3" style = "width: 50rem; text-align:center">
+          <div class="card-header">
+            <!-- the card header text -->
+            body:
+            {{comment.body}}
+          </div>
+          <div class="card-body">
+            <!-- the card body text -->
+            Uploaded by:
+            {{comment.username}}
+            <br>
+            User ID:
+            {{comment.userID}}
+            <br>
+            Date:
+            {{comment.date}}
+          </div>
+          <div class="card-footer">
+          
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- col -->
+  </div>
+
+
+<div style="padding:5px;">
+</div> <!-- col -->
+</div>

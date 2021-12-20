@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     sessionStorage.setItem('loginUser',this.user);
     this.webService.getOneUser(this.loginForm.value)
+    this.loginForm.reset();
     }
 
 

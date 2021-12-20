@@ -21,7 +21,7 @@
           <div class="card-body">
             <!-- Display of every post made in the DB-->
             Comment:
-            {{social.postComment}}
+            {{social.body}}
             <br>
             Uploaded by:
             {{social.username}}
@@ -29,15 +29,15 @@
             UserId:
             {{social.userID}}
             <br>
-            PostId:
-            {{social.id}}
+            Posted on:
+            {{ social.date | date }} 
             </div>
             <div class="card-footer">
 
             Additional:
             <br>
             <div><!-- Buttons to call and pass values into the ts side -->
-              <button class="btn btn-sm btn-info" (click)="getComments(social.id)">Display replies</button>
+              <button class="btn btn-sm btn-info"[routerLink]="['/home', social.id]">Display replies</button>
                for {{social.body}}
             </div>
             <div>
@@ -66,38 +66,3 @@
   </div> 
 </div> 
 
-<!--COMMENTS-->
-    <div class="row"> <!-- row -->
-      <div class="col-sn-12"> <!-- col -->
-        <!-- for loop of replies list* -->
-        <div *ngFor="let comment of webService.comment_list">
-          <!-- Bootstrap card start -->
-          <div class="card text-white bg-dark mb-3" style = "width: 50rem; text-align:center">
-            <div class="card-header">
-              <!-- the card header text -->
-              body:
-              {{comment.body}}
-            </div>
-            <div class="card-body">
-              <!-- the card body text -->
-              Uploaded by:
-              {{comment.username}}
-              <br>
-              User ID:
-              {{comment.userID}}
-              <br>
-              Date:
-              {{comment.date}}
-            </div>
-            <div class="card-footer">
-            
-  
-            </div>
-          </div>
-        </div>
-      </div> <!-- col -->
-    </div>
-
-
-<div style="padding:5px;">
-</div> <!-- col -->

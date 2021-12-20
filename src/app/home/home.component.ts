@@ -95,12 +95,15 @@ getComments(postID:any){
 //* funtionality for the follow button 
 
 follow(userID:any) {
-  this.postNewUser(this.followForm.value)
-  .subscribe((response: any) => {
-    this.RFollowID =  userID
     console.log(userID)
     console.log(this.RFollowID)
+    this.RFollowID =  userID
     sessionStorage.setItem('followerID',this.RFollowID);
+    
+    this.postNewUser(this.followForm.value)
+    .subscribe((response: any) => {
+      
+    
   })
 }
 
